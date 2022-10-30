@@ -1,0 +1,54 @@
+---
+title: "Formative Assessment FT3"
+author: "EXAM NUMBER"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = here::here())
+
+# Remember to attach here all the packages you need
+```
+
+## Overview
+
+The data of this assessment is about the English Dative Alternation for dative constructions, for example:
+
+- **Prepositional Phrase**: Rory has given ten roses *to Ever*.
+- **Noun Phrase**: Rory has given *Ever* ten roses.
+
+In both sentences, *Rory* is the giver, *Ever* is the recipient, and *ten roses* is the theme. 
+
+See the study described [here](https://web.stanford.edu/~bresnan/qs-submit.pdf) for more info.
+
+The data comes from the Switchboard corpus and the Treebank Wall Street Journal collection, and contains the following columns:
+
+- `RealizationRec`: Whether the sentence's recipient is realised as a Noun Phrase (NP) or Prepositional Phrase (PP).
+- `Verb`: The verb in the sentence.
+- `AnimacyOfRec`: Animacy of the recipient (animate vs inanimate).
+- `AnimacyOfTheme`: Animacy of the theme (animate vs inanimate).
+- `LengthOfTheme`: Number of words that make up the theme.
+
+You want to answer the following question: **Do animacy and length play a role in the selection of Noun Phrase vs Prepositional Phrase in dative constructions?**
+
+Answer this question by performing a data analysis on the provided data.
+
+Some pointers:
+
+- **Check the data**: Are there missing values? How many observations are there? How many columns?
+
+- **Think about the variables** in the data: which is the "outcome variable"? what type of variable is that?
+
+- **Summarise** the data: briefly describe numeric summaries of the data by picking appropriate measures depending on the nature of the variable (mean, median, mode; standard deviation or range).
+
+- **Plot the data**: use plots that are appropriate to illustrate patterns in the data, based on the question above. Describe the patterns you see in the plots.
+
+- **Run a linear model**: which distribution family should you use? should you transform character variables to factors? which coding system should you use for the categorical predictors? Should you change the order of the levels in the categorical predictors? Should you transform the numeric predictors?
+
+- **Report the model and results**: describe the model specification and report the results in writing and with plots.
+
+- **Render the report to HTML**.
+
+- **Submit your project to GitHub**. Remember to upload the `analysis.Rmd` and the `analysis.html` files to the `code/` folder of your assessment repository.
